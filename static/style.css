@@ -17,8 +17,7 @@
 .apresentacao__texto {
     color: #b2b22c;
     margin: 0; 
-    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semitransparente para melhorar a legibilidade */
-    padding: 10px; /* Adiciona um pouco de padding ao redor do texto */
+padding: 10px; /* Adiciona um pouco de padding ao redor do texto */
     border-radius: 5px; /* Adiciona bordas arredondadas */
 }
 
