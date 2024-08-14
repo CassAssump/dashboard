@@ -9,12 +9,13 @@
     justify-content: center; 
     align-items: center; 
     text-align: center; 
+    gap: 10px;
 }
 
 .apresentacao__texto {
     color: #b2b22c;
     margin: 0; 
-    gap: 10px;
+    
 }
 
 #price {
