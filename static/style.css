@@ -6,13 +6,16 @@
     height: 100vh; 
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
-.apresentacao__texto{
+
+.apresentacao__texto {
     color: #b2b22c;
-    margin-right: 10px;
+    margin: 0; 
 }
+
 #price {
     font-size: 2em;
     color: #4caf50;
