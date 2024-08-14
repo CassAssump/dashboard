@@ -5,11 +5,7 @@
     background-position: center; 
     background-repeat: no-repeat; 
     height: 100vh; 
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+   
 }
 
 .apresentacao__texto {
