@@ -1,18 +1,24 @@
 /* static/style.css */
-body {
+.apresentacao {
+    background-image: url(image.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+}
 }
 
-h1 {
-    color: #333;
+.apresentacao__texto {
+    color: #b2b22c;
+    margin-right: 10px;
 }
 
 #price {
-    font-size: 2em;
+     font-size: 2em;
     color: #4caf50;
+    margin-left: 10px;
 }
