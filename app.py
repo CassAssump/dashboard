@@ -12,15 +12,17 @@ def index():
 
 def fetch_data():
     while True:
-        # Exemplo de busca de dados de Bitcoin e Ethereum
-        btc_response = requests.get('https://api.coindesk.com/v1/bpi/currentprice/BTC.json')
+        try:
+            btc_response = requests.get('https://api.coindesk.com/v1/bpi/currentprice/BTC.json')
+            btc_response.raise_for_status()  # Verifica se houve algum erro na requisição
+            btc_data = btc_response.json()
 
-        btc_data = btc_response.json()
+            socketio.emit('updateData', {
+                'price': btc_data['bpi']['USD']['rate'],  # Campo ajustado para 'price'
+            })
+        except requests.exceptions.RequestException as e:
+            print(f"Erro ao buscar dados: {e}")
 
-
-        socketio.emit('updateData', {
-            'btc_price': btc_data['bpi']['USD']['rate'],
-        })
         time.sleep(5)  # Espera 5 segundos antes de buscar novos dados
 
 @socketio.on('connect')
