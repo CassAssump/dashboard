@@ -11,12 +11,16 @@
     align-items: center; 
     text-align: center; 
     gap: 10px;
+    padding-top: 80px;
 }
 .cabecalho{
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     
 }
 
