@@ -6,10 +6,12 @@
     height: 100vh; 
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center; 
     text-align: center; 
     gap: 10px;
+    
 }
 
 .apresentacao__texto {
