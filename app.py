@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 import requests
 import time
+import logging
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -16,12 +17,17 @@ def fetch_data():
             btc_response = requests.get('https://api.coindesk.com/v1/bpi/currentprice/BTC.json')
             btc_response.raise_for_status()  # Verifica se houve algum erro na requisição
             btc_data = btc_response.json()
+            
+            eth_response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+            eth_data = eth_response.json()
 
             socketio.emit('updateData', {
-                'price': btc_data['bpi']['USD']['rate'],  # Campo ajustado para 'price'
+                'btc_price': btc_data['bpi']['USD']['rate'],
+                'eth_price': eth_data['ethereum']['usd']
             })
+        
         except requests.exceptions.RequestException as e:
-            print(f"Erro ao buscar dados: {e}")
+            logging.error(f"Erro ao buscar dados: {e}")
 
         time.sleep(5)  # Espera 5 segundos antes de buscar novos dados
 
