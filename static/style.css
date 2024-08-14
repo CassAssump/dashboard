@@ -38,6 +38,10 @@
     border-radius: 8px;
     cursor: pointer;
 }
+.cabecalho__menu__link:hover{
+    border-color: aqua;
+}
+
 
 .apresentacao__texto {
     color: #b2b22c;
