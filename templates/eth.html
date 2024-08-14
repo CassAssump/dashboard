@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Price</title>
+    <link rel="stylesheet" href="/static/image.png">
+</head>
+<body class="apresentacao__texto">
+    <h1 class="apresentacao__texto">Preço da Ethereum em Tempo Real</h1>
+    <div id="eth_price">Carregando...</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+
+        socket.on('updateEthereum', function(data) {
+            var ethPriceElem = document.getElementById('eth_price');
+            ethPriceElem.innerText = 'Ethereum: $' + data.eth_price;
+
+            // Adicionar a classe 'updated' e removê-la após 500ms
+            ethPriceElem.classList.add('updated');
+            setTimeout(function() {
+                ethPriceElem.classList.remove('updated');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
