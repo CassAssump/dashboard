@@ -21,10 +21,15 @@
     <script>
         var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
 
+socket.on('updateBitcoin', function(data) {
+    document.getElementById('btc_price').innerText = 'Bitcoin: $' + data.btc_price;
+});
 
-        socket.on('updateData', function(data) {
-            document.getElementById('price').innerText = 'Preço Atual: $' + data.price;
-        });
+// Adicionar um listener para caso de erro
+socket.on('connect_error', function() {
+    console.log('Erro na conexão com o WebSocket');
+    document.getElementById('btc_price').innerText = 'Erro ao carregar preço';
+});
     </script>
 </body>
 </html>
