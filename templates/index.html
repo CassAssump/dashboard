@@ -1,15 +1,15 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="apresentacao">
-    <div id="btc-price">Bitcoin: Carregando...</div>
-    <div id="eth-price">Ethereum: Carregando...</div>
+<body class="apresentacao__texto">
+    <h1 class="apresentacao__texto">Preço do Bitcoin em Tempo Real</h1>
+    <div id="price">Carregando...</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
@@ -18,7 +18,6 @@
 
         socket.on('updateData', function(data) {
             document.getElementById('price').innerText = 'Preço Atual: $' + data.price;
-            document.getElementById('eth-price').innerText = 'Ethereum: $' + data.eth_price;
         });
     </script>
 </body>

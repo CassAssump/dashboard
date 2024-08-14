@@ -14,14 +14,12 @@ def fetch_data():
     while True:
         # Exemplo de busca de dados de Bitcoin e Ethereum
         btc_response = requests.get('https://api.coindesk.com/v1/bpi/currentprice/BTC.json')
-        eth_response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
 
         btc_data = btc_response.json()
-        eth_data = eth_response.json()
+
 
         socketio.emit('updateData', {
             'btc_price': btc_data['bpi']['USD']['rate'],
-            'eth_price': eth_data['ethereum']['usd']
         })
         time.sleep(5)  # Espera 5 segundos antes de buscar novos dados
 
