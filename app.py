@@ -11,6 +11,14 @@ socketio = SocketIO(app)
 def index():
     return render_template('index.html')
 
+@app.route('/bitcoin')
+def bitcoin():
+    return render_template('bitcoin.html')
+
+@app.route('/ethereum')
+def ethereum():
+    return render_template('ethereum.html')
+
 def fetch_data():
     while True:
         try:
@@ -21,10 +29,9 @@ def fetch_data():
             eth_response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
             eth_data = eth_response.json()
 
-            socketio.emit('updateData', {
-                'btc_price': btc_data['bpi']['USD']['rate'],
-                'eth_price': eth_data['ethereum']['usd']
-            })
+            # Emitir dados para as páginas específicas
+            socketio.emit('updateBitcoin', {'btc_price': btc_data['bpi']['USD']['rate']})
+            socketio.emit('updateEthereum', {'eth_price': eth_data['ethereum']['usd']})
         
         except requests.exceptions.RequestException as e:
             logging.error(f"Erro ao buscar dados: {e}")
