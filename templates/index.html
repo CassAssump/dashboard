@@ -13,7 +13,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script>
-        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+
 
         socket.on('updateData', function(data) {
             document.getElementById('price').innerText = 'Preço Atual: $' + data.price;
