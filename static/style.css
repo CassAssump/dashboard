@@ -19,7 +19,9 @@
     margin: 0; 
     
 }
-
+/* anotação do cass: Precisa adicionar o preço do bitcoin e do ETHEREUM agora
+mandei o exemplo no discord
+*/
 #price {
     font-size: 2em;
     color: #4caf50;
