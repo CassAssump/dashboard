@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask_socketio import SocketIO, emit
 import requests
 import time
@@ -6,6 +6,10 @@ import logging
 
 app = Flask(__name__)
 socketio = SocketIO(app)
+
+@app.route('/')
+def index():
+    return redirect(url_for('bitcoin'))
 
 @app.route('/bitcoin')
 def bitcoin():
