@@ -13,11 +13,11 @@ def index():
 
 @app.route('/bitcoin')
 def bitcoin():
-    return render_template('bitcoin.html')
+    return render_template('btc.html')
 
 @app.route('/ethereum')
 def ethereum():
-    return render_template('ethereum.html')
+    return render_template('eth.html')
 
 def fetch_data():
     while True:
