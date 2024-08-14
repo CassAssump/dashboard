@@ -1,29 +1,20 @@
-/* static/style.css */
 .apresentacao {
-    background-image: url(image.png);
+    background-image: url('image.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     height: 100vh; 
-<<<<<<< HEAD
-   
-}
-=======
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
->>>>>>> 3d48e9730ea13eadbb7e4d04b2fb6bd12b2f2281
-
-.apresentacao__texto {
+.apresentacao__texto{
     color: #b2b22c;
     margin-right: 10px;
 }
-
 #price {
-     font-size: 2em;
+    font-size: 2em;
     color: #4caf50;
     margin-left: 10px;
 }
