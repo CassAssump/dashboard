@@ -1,5 +1,5 @@
 .apresentacao {
-    background-image: url('image.png');
+    background-image: url('images/image.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -12,6 +12,7 @@
     text-align: center; 
     gap: 10px;
 }
+
 
 .apresentacao__texto {
     color: #b2b22c;
