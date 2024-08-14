@@ -49,7 +49,10 @@
 padding: 10px; /* Adiciona um pouco de padding ao redor do texto */
     border-radius: 5px; /* Adiciona bordas arredondadas */
 }
-
+.apresentacao__texto:hover{
+    border-color: rebeccapurple;
+    
+}
 #btc_price {
     font-size: 2em;
     color: #4caf50;
