@@ -42,25 +42,35 @@
     border-color: aqua;
 }
 
+.bitcoin_conteiner{
+    width: 300px;
+            height: 300px;
+            background-color: #f9a825; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin: 100px auto; /
+}
 
 .apresentacao__texto {
     color: #b2b22c;
     margin: 0; 
 padding: 10px; /* Adiciona um pouco de padding ao redor do texto */
-   border: 10px solid;
-border-radius: 5px; /* Adiciona bordas arredondadas */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
 }
-.apresentacao__texto:hover{
-    border-color: rebeccapurple;
 
-}
 #btc_price {
     font-size: 2em;
     color: #4caf50;
     margin-top: 10px;
 }
 #eth_price{
-    font-size: 2em;
+     font-size: 2em;
     color: #4caf50;
     margin-top: 10px;
 }
