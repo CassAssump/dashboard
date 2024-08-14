@@ -55,3 +55,8 @@ padding: 10px; /* Adiciona um pouco de padding ao redor do texto */
     color: #4caf50;
     margin-top: 10px;
 }
+#eth_price{
+    font-size: 2em;
+    color: #4caf50;
+    margin-top: 10px;
+}
