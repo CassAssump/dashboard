@@ -1,0 +1,18 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+#price {
+    font-size: 2em;
+    color: #4caf50;
+}
