@@ -12,7 +12,16 @@
     text-align: center; 
     gap: 10px;
 }
+.cabecalho__menu__lin{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
 
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
 .apresentacao__texto {
     color: #b2b22c;
